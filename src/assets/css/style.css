@@ -49,12 +49,23 @@ body{
 
 }
 
+.client-list-container-mobile{
+    width: 100% !important;
+    margin-top: 62px !important;
+}
+
 .client-detail-container {
     width: calc(100% - 425px) !important;
     height: calc(100vh - 80px);
     margin-left: 425px !important;
     margin-top: 60px !important;
     overflow: hidden;
+
+}
+
+.client-detail-container-mobile {
+    width: 100%;
+    height: 100vh;
 
 }
 

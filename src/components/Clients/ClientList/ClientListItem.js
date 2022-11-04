@@ -1,16 +1,27 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 import { ClientState } from "../../../context/Context";
+
 
 const ClientListItem = (props) => {
     const { client, active } = props;
     const { dispatch } = ClientState();
+    const isMobile = useMediaQuery({ query: "(max-width: 960px)" });
+    let navigate = useNavigate();
+
+
 
     const selectClientHandler = () => {
-        dispatch({
-            type: "CLIENT_SELECT",
-            payload: client,
-        });
+        if(!isMobile){
+            dispatch({
+                type: "CLIENT_SELECT",
+                payload: client,
+            });
+        }else{
+            navigate(`/clients/${client._id}`);
+        }
     }
 
     return (
