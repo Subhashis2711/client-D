@@ -3,13 +3,15 @@ import MediaQuery from "react-responsive";
 import DesktopLayout from "./DesktopLayout";
 import MobileLayout from "./MobileLayout";
 
-const Layout = () => {
+const Layout = (props) => {
     return (
         <Fragment>
-            <MediaQuery minWidth={779}>
-                <DesktopLayout />
+            <MediaQuery minWidth={961}>
+                <DesktopLayout>
+                    {props.children}
+                </DesktopLayout>
             </MediaQuery>
-            <MediaQuery maxWidth={778}>
+            <MediaQuery maxWidth={960}>
                 <MobileLayout />
             </MediaQuery>
         </Fragment>

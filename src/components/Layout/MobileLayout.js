@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Topbar from './Topbar'
 
 const MobileLayout = () => {
   return (
-    <div>"Mobile View</div>
+    <Fragment>
+        <Topbar type="mobile" />
+    </Fragment>
   )
 }
 

@@ -1,3 +1,8 @@
+body{
+    background-color: #EBF2F5 !important;
+
+}
+
 #side-nav {
     position: fixed;
     top: 0;
@@ -15,8 +20,68 @@
     margin-right: auto;
 }
 
-#top-bar {
-    left: 72px;
+.desktop-topbar {
+    left: 72px !important;
     background: transparent !important;
     box-shadow: 0px 1px 6px #00000029;
+}
+
+.mobile-topbar {
+    background: transparent linear-gradient(90deg, #112949 0%, #000000 100%) 0%
+        0% no-repeat padding-box;
+    height: 59px;
+}
+
+.mobile-topbar .nav-link {
+    color: #fff !important;
+}
+
+.client-list-container{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    left: 72px;
+    width: 350px !important;
+    background-color: #EBF2F5;
+    z-index: 9999;
+    box-shadow: 0px 1px 6px #00000029;
+    padding: 0 !important;
+
+}
+
+.client-detail-container {
+    width: calc(100% - 425px) !important;
+    height: calc(100vh - 80px);
+    margin-left: 425px !important;
+    margin-top: 60px !important;
+    overflow: hidden;
+
+}
+
+.client-list-accordion-container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.client-list-accordion button{
+    padding: 0.5rem !important;
+}
+
+.client-list-accordion .accordion-collapse{
+    background-color: #EBF2F5 !important;
+}
+
+.client-list-accordion .client-list-item-card{
+    height: 4rem;
+    border-radius: 0.5rem;
+}
+
+.entity-accordion button{
+    padding: 0.5rem;
+    display: inline;
+}
+
+.client-list-item-card.active{
+    background-color: #112949;
+    color: white;
 }
